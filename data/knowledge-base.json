@@ -1,0 +1,74 @@
+{
+  "articles": [
+    {
+      "id": "kb-001",
+      "title": "How to Reset Your Password",
+      "category": "Account",
+      "keywords": ["password", "reset", "forgot", "login", "access", "account"],
+      "content": "To reset your password: 1) Go to the login page and click 'Forgot Password'. 2) Enter your registered email address. 3) Check your email for a reset link (valid for 24 hours). 4) Click the link and enter a new password. 5) Your password must be at least 8 characters with one uppercase letter, one number, and one special character. If you don't receive the email within 5 minutes, check your spam folder or contact support."
+    },
+    {
+      "id": "kb-002",
+      "title": "Cancellation and Refund Policy",
+      "category": "Billing",
+      "keywords": ["cancel", "refund", "subscription", "money", "charge", "billing", "payment", "fee"],
+      "content": "Cancellation Policy: You can cancel your subscription at any time from your Account Settings > Subscription. Your access continues until the end of the current billing period. Refund Policy: We offer a 30-day money-back guarantee for new subscriptions. To request a refund, contact support within 30 days of your initial purchase. Refunds are processed within 5-7 business days back to your original payment method. Note: Refunds are not available for renewals or after the 30-day window, but you can cancel to prevent future charges."
+    },
+    {
+      "id": "kb-003",
+      "title": "Troubleshooting Slow Performance",
+      "category": "Technical",
+      "keywords": ["slow", "performance", "speed", "lag", "loading", "fast", "freeze", "crash", "bug"],
+      "content": "If you're experiencing slow performance: 1) Clear your browser cache and cookies. 2) Disable browser extensions temporarily. 3) Check your internet connection speed (we recommend 10 Mbps+). 4) Try a different browser (Chrome, Firefox, or Edge). 5) Ensure your browser is up to date. 6) Disable VPN if enabled. 7) If on mobile, close background apps. If the issue persists after these steps, please provide your browser version and operating system when contacting support so we can investigate further."
+    },
+    {
+      "id": "kb-004",
+      "title": "Upgrading Your Subscription Plan",
+      "category": "Billing",
+      "keywords": ["upgrade", "plan", "premium", "pro", "tier", "features", "subscription", "pricing"],
+      "content": "To upgrade your subscription: 1) Log in to your account. 2) Go to Account Settings > Subscription. 3) Click 'Upgrade Plan'. 4) Select your desired plan (Basic, Pro, or Enterprise). 5) Review the features and pricing. 6) Enter payment details and confirm. Upgrades take effect immediately, and you'll be charged a prorated amount for the remainder of your current billing period. Enterprise plans with custom pricing are available for teams of 50+. Contact sales@example.com for enterprise inquiries."
+    },
+    {
+      "id": "kb-005",
+      "title": "Two-Factor Authentication Setup",
+      "category": "Security",
+      "keywords": ["2fa", "two-factor", "authentication", "security", "mfa", "otp", "code", "protect", "safe"],
+      "content": "Setting up Two-Factor Authentication (2FA): 1) Go to Account Settings > Security. 2) Click 'Enable Two-Factor Authentication'. 3) Choose your preferred method: Authenticator App (recommended) or SMS. 4) For Authenticator App: Download Google Authenticator or Authy, scan the QR code, enter the 6-digit code to verify. 5) Save your backup codes in a secure location — these can be used if you lose access to your authenticator. 6) 2FA will be required on your next login. To disable 2FA, go to Security settings and click 'Disable', then confirm with your current password."
+    },
+    {
+      "id": "kb-006",
+      "title": "Data Export and Account Deletion",
+      "category": "Account",
+      "keywords": ["export", "data", "delete", "account", "gdpr", "privacy", "download", "backup"],
+      "content": "Exporting Your Data: Go to Account Settings > Privacy > Export Data. You'll receive a download link via email within 24 hours containing all your data in JSON and CSV formats. Account Deletion: Go to Account Settings > Privacy > Delete Account. Read the warning carefully — this is permanent and cannot be undone. Enter your password to confirm. All your data will be permanently deleted within 30 days per GDPR regulations. Note: Active subscriptions must be cancelled before deleting your account. If you have remaining subscription time, it will not be refunded."
+    },
+    {
+      "id": "kb-007",
+      "title": "Integrations and API Access",
+      "category": "Technical",
+      "keywords": ["api", "integration", "connect", "webhook", "zapier", "key", "developer", "third-party"],
+      "content": "API Access: Available on Pro and Enterprise plans. Go to Account Settings > Developer > API Keys to generate your API key. Rate limits: 1,000 requests/hour (Pro), 10,000 requests/hour (Enterprise). API documentation is available at docs.example.com/api. Integrations: We support native integrations with Slack, Zapier, Microsoft Teams, and Salesforce. Go to Account Settings > Integrations to connect your tools. For custom integrations, use our webhook support — configure webhooks at Account Settings > Developer > Webhooks. Each webhook supports retry logic with up to 3 attempts."
+    },
+    {
+      "id": "kb-008",
+      "title": "Team Management and User Permissions",
+      "category": "Account",
+      "keywords": ["team", "user", "invite", "permission", "role", "admin", "member", "access", "collaborate"],
+      "content": "Adding Team Members: Go to Account Settings > Team > Invite Members. Enter the email address and select their role. Roles available: Owner (full access), Admin (manage settings and users), Editor (create and edit content), Viewer (read-only access). Invited members receive an email to create or connect their account. Managing Permissions: Admins can change user roles under Team > Members. Click on any member to adjust their permissions or remove them. The Owner role can only be transferred, not removed. Note: Team features are available on Pro (up to 10 members) and Enterprise (unlimited members) plans."
+    },
+    {
+      "id": "kb-009",
+      "title": "Mobile App Troubleshooting",
+      "category": "Technical",
+      "keywords": ["mobile", "app", "ios", "android", "phone", "tablet", "install", "update", "crash"],
+      "content": "Common Mobile App Issues: App not loading: Check your internet connection, force close the app and reopen. App crashing: Update to the latest version in the App Store or Google Play. Clear app cache: iOS: Settings > General > iPhone Storage > App > Offload App. Android: Settings > Apps > App > Storage > Clear Cache. Login issues: Ensure your email and password are correct; use 'Forgot Password' if needed. If biometric login fails, disable and re-enable it in app settings. Push notifications not working: Check your phone's notification settings for the app and ensure notifications are enabled."
+    },
+    {
+      "id": "kb-010",
+      "title": "Contacting Support and Escalation Process",
+      "category": "Support",
+      "keywords": ["contact", "support", "help", "human", "agent", "escalate", "urgent", "ticket", "chat", "phone", "email"],
+      "content": "Support Channels: Live Chat: Available 24/7 for Pro and Enterprise users, 9am-6pm EST for Basic users. Email: support@example.com — response within 24 hours (4 hours for Pro/Enterprise). Phone: Enterprise users can call 1-800-EXAMPLE for priority support. Escalation: If your issue isn't resolved, ask to be escalated to Tier 2 support or a supervisor. For billing disputes, request escalation to the billing team. Emergency issues (service outage, security breach): Use our status page at status.example.com or email urgent@example.com for immediate attention. Average response times: Live chat <2 minutes, Email <24 hours, Phone <5 minutes hold time."
+    }
+  ]
+}
