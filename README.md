@@ -1,89 +1,89 @@
-# Customer Support AI Agent
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=0:0d47a1,50:7e22ce,100:ff006e&text=Customer%20Support%20Agent&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=Claude%20%C2%B7%20Next.js%2014%20%C2%B7%20Streaming%20RAG&descAlignY=80&descSize=16" width="100%" alt="banner"/>
+</div>
 
-An AI-powered customer support chat application built with Next.js, Claude API (claude-sonnet-4-6), RAG knowledge base, real-time streaming, mood detection, and human escalation suggestions.
+<div align="center">
 
-## Features
+![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Anthropic](https://img.shields.io/badge/Claude_Sonnet_4.6-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-00ff41?style=for-the-badge)
 
-- **Real-time streaming** responses from Claude via SSE
-- **RAG (Retrieval-Augmented Generation)** — keyword search over a 10-article knowledge base surfaces relevant articles before each Claude call
-- **Mood detection** — Claude classifies each response as `frustrated`, `neutral`, or `happy` and surfaces an emoji badge
-- **Escalation suggestions** — when a customer appears frustrated and unresolved, a banner prompts them to connect with a human agent
-- **Extended thinking** — adaptive thinking blocks are streamed and shown in a collapsible "Reasoning process" panel
-- **Prompt caching** — the system prompt + injected KB context is cached with `cache_control: ephemeral` for reduced latency and cost
-- **Knowledge base citations** — articles used to answer a query are shown as inline source chips
-- **Clean Tailwind UI** with dark-mode CSS variables, custom animations, and auto-resize textarea
+</div>
 
-## Tech Stack
+A streaming customer-support chat built with **Next.js 14** and **Claude Sonnet 4.6** — RAG over a 10-article knowledge base, mood-aware UI, extended-thinking blocks, and ephemeral prompt caching.
 
-- **Next.js 14** (App Router)
-- **@anthropic-ai/sdk** with streaming + extended thinking
-- **Tailwind CSS** + Radix UI primitives
-- **TypeScript**
+## ✨ Features
 
-## Getting Started
+- 🌊 **Real-time streaming** — Claude responses over Server-Sent Events
+- 🔎 **RAG knowledge base** — keyword search across 10 support articles, cited inline as source chips
+- 😀 **Mood detection** — every reply classified `frustrated` / `neutral` / `happy`, surfaced as an emoji badge
+- 🚨 **Auto-escalation banner** — when frustration looks unresolved, prompts the user to talk to a human
+- 🧠 **Extended thinking** — Claude's reasoning streamed live into a collapsible panel
+- 💸 **Prompt caching** — system prompt + KB context flagged `cache_control: ephemeral` to cut input cost
+- 🎨 **Polished Tailwind UI** — dark-mode CSS vars, custom animations, auto-resize textarea
 
-### 1. Clone and install
+## 🏗️ Architecture
+
+```mermaid
+flowchart LR
+    U[User] -->|message| UI[Next.js Chat UI]
+    UI -->|POST /api/chat| API[API Route]
+    API -->|keyword search| KB[(knowledge-base.json<br/>10 articles)]
+    KB -->|top-K articles| API
+    API -->|stream w/ ephemeral cache| C[Claude Sonnet 4.6]
+    C -->|SSE: thinking + text + mood| UI
+    UI -->|render| U
+```
+
+## 🚀 Quick start
 
 ```bash
 git clone https://github.com/Dhanush-Aries/customer-support-agent.git
 cd customer-support-agent
 npm install
+
+cp .env.example .env.local            # then add ANTHROPIC_API_KEY
+npm run dev                           # http://localhost:3000
 ```
 
-### 2. Set your API key
+## 🛠️ Tech stack
 
-```bash
-cp .env.example .env.local
-# Edit .env.local and add your Anthropic API key
-```
+**Next.js 14** (App Router) · **@anthropic-ai/sdk** with streaming + extended thinking · **Tailwind CSS** + Radix UI · **TypeScript**
 
-### 3. Run the dev server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## Environment Variables
+## ⚙️ Environment
 
 | Variable | Required | Description |
 |---|---|---|
-| `ANTHROPIC_API_KEY` | Yes | Your Anthropic API key from [console.anthropic.com](https://console.anthropic.com) |
+| `ANTHROPIC_API_KEY` | ✅ | Get it at [console.anthropic.com](https://console.anthropic.com) |
 
-## Project Structure
+## 📂 Project structure
 
 ```
 ├── app/
 │   ├── api/chat/route.ts   # Streaming API route (Claude + RAG)
 │   ├── page.tsx            # Main chat UI page
 │   ├── layout.tsx          # Root layout
-│   └── globals.css         # Tailwind base styles + CSS variables
+│   └── globals.css         # Tailwind base + CSS variables
 ├── components/
-│   ├── ChatMessage.tsx     # Message bubble with mood, thinking, citations
-│   └── ChatInput.tsx       # Auto-resize textarea with send button
+│   ├── ChatMessage.tsx     # Message bubble with mood / thinking / citations
+│   └── ChatInput.tsx       # Auto-resize textarea + send
 ├── data/
-│   └── knowledge-base.json # 10 support articles (account, billing, technical, security)
+│   └── knowledge-base.json # 10 support articles (account, billing, security, …)
 └── lib/
-    ├── rag.ts              # Keyword-based search over the knowledge base
-    └── utils.ts            # Tailwind class merge utility
+    ├── rag.ts              # Keyword search over the KB
+    └── utils.ts            # Tailwind class merge
 ```
 
-## Knowledge Base Topics
+## 📚 Knowledge base topics
 
-The built-in knowledge base covers:
+Password reset · Cancellation & refunds · Slow-performance troubleshooting · Subscription upgrades · 2FA · Data export & account deletion · API access · Team management · Mobile app issues · Contacting support
 
-- Password reset
-- Cancellation and refund policy
-- Slow performance troubleshooting
-- Subscription upgrades
-- Two-factor authentication
-- Data export and account deletion
-- API access and integrations
-- Team management and permissions
-- Mobile app troubleshooting
-- Contacting support and escalation
+## 📜 License
 
-## License
+MIT — see [LICENSE](./LICENSE)
 
-MIT
+---
+
+<sub>Part of the <a href="https://github.com/Dhanush-Aries">Dhanush Shankar</a> AI engineering portfolio.</sub>
