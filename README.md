@@ -2,8 +2,6 @@
 
 > **A production-shape support chatbot: RAG over a 10-article knowledge base, mood detection on every reply, an auto-escalation banner when frustration doesn't resolve, extended-thinking blocks streamed live, and ephemeral prompt caching to keep the bill flat.**
 
-<p align="center"><img src="assets/hero.gif" alt="Customer Support Agent — streaming Claude with mood + citations" width="720"></p>
-
 <p align="center">
   <img src="https://img.shields.io/github/actions/workflow/status/Danush-Aries/customer-support-agent/ci.yml?branch=main&style=flat-square" alt="build">
   <img src="https://img.shields.io/badge/license-MIT-00ff41?style=flat-square" alt="license">
@@ -45,12 +43,6 @@ flowchart LR
     C -->|SSE: thinking + text + mood| UI
     UI -->|render| U
 ```
-
-## Screenshots
-
-| Streaming reply with mood badge | Extended thinking panel | Escalation banner |
-|---|---|---|
-| ![](assets/screenshot-1.png) | ![](assets/screenshot-2.png) | ![](assets/screenshot-3.png) |
 
 ## Features
 
